@@ -39,8 +39,15 @@ module.exports = {
         'public/lib/fastclick/lib/fastclick.js'
 			]
 		},
-		css: 'public/dist/application.min.css',
-		js: 'public/dist/application.min.js'
+		css: [
+			'public/modules/**/css/*.css'
+		],
+		js: [
+			'public/config.js',
+			'public/application.js',
+			'public/modules/*/*.js',
+			'public/modules/*/*[!tests]*/*.js'
+		]
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || '968149419880980',
